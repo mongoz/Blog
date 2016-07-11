@@ -1,0 +1,14 @@
+                        <div ng-controller="SecondaryCtrl" id="secondary" class="col-md-3">
+                          <div class="categories">
+                              <h4 class="categories-title">Categories</h4>
+                              <ul ng-repeat="category in categories">
+                                <li><a ui-sref="categories({name: (category.name | spaceless), id:category._id})" class="">{{category.name}}</a></li>
+                              </ul>
+                          </div>
+                          <div class="archive">
+                              <h4 class="">Archives</h4>
+                              <ul ng-repeat="archive in archives | orderBy:'-month'">
+                              <li><a ui-sref="archive({year: archive.year, month: archive.month })" class="">{{archive.month | monthName}} {{archive.year}}</a></li>
+                              </ul>
+                          </div>
+                        </div>

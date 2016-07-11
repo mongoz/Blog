@@ -1,0 +1,83 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="nav-wrapper container">
+        <div ng-include="'partials/_navbar.html'"></div>
+      </div>
+        <div id="content" class="site-content container">
+            <main id="main" class="" role="main">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-9">
+                    <div class="row">
+                      <h1 class="entry-title">{{article.title}}</h1>
+
+                      <div class="entry-content">
+                        <p ta-bind ng-model="article.text"></p>
+                      </div><!-- .entry-content -->
+                      
+                      <hr>
+
+
+                      <div class="media" ng-repeat="comment in article.comments">
+                          <div class="media-left">
+                            <a href="#">
+                              <img class="media-object" src="http://placehold.it/32X32" alt="...">
+                            </a>
+                          </div>
+                          <div class="media-body">
+                            <h4 class="media-heading">Media heading</h4>
+                            <p>{{comment.text}}</p>
+                          </div>
+                      </div>
+                      
+                        <hr>
+                        <div class="comments">
+                        <h3>Leave a comment </h3>
+
+                        <form class="form-horizontal" role="form" ng-submit="addComment()">
+                          <div class="form-group">
+                            <label for="nameInput" class="col-sm-2 control-label">Name</label>
+                            <div class="col-sm-4">
+                              <input type="text" class="form-control" id="nameInput" ng-model="comment.name" placeholder="">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="emailInput" class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-4">
+                              <input type="email" class="form-control" id="emailInput" ng-model="comment.email" placeholder="">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="commentInput" class="col-sm-2 control-label">Comment</label>
+                            <div class="col-sm-6">
+                              <textarea class="form-control" id="commentInput" ng-model="comment.text" rows="6"></textarea>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-8">
+                              <button type="submit" class="btn btn-default">Submit</button>
+                            </div>
+                          </div>
+                        </form>
+
+                      </div>
+                    </div>
+                  </div>
+                    <div ng-include="'partials/_sidebar.html'"></div>
+                </div>
+              </div>
+            </main>
+        </div>
+            <footer id="colophon" class="site-footer container" role="contentinfo">
+              <div class="site-info col-md-5">
+                Herpa derpa <a href="#/" rel="designer"></a>.    
+              </div><!-- .site-info -->
+              <div id="footertext" class="col-md-7">
+                flerpa sherpa        
+              </div>   
+          </footer>
+        </div>
+    </div>  
+  </div>
+</div>

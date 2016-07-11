@@ -1,0 +1,158 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #e4e7ec;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+a {
+  color: #000;
+}
+
+ul {
+  margin-bottom: 0;
+}
+
+.list-inline > li {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+
+#main {
+  width: 100%;
+  margin-top: 15px;
+}
+
+#content {
+  background: #fff;
+}
+
+#content img {
+  margin-top: 15px;
+}
+
+/* 6.2 Secondary 
+------------------------------------------------------- */
+#secondary {
+  padding-top: 20px;
+}
+#secondary ul {
+  list-style: none;
+  margin-left: 5px;
+}
+#secondary ul li:before {
+  margin-right: 5px;
+  content: "\f0da";
+  font-family: "FontAwesome";
+  color: #918f93;
+}
+
+#secondary h1.widget-title {
+  font-size: 24px;
+}
+
+#secondary h4 {
+  margin-left: 25px;
+}
+
+#secondary .archive {
+  margin-top: 25px;
+}
+
+/* 4. Navigation Menu 
+------------------------------------------------------- */
+.nav-wrapper {
+  background: #f8f8f8;
+  border-bottom: solid 1px #f1f1f1;
+}
+.nav-wrapper .navbar-default {
+  margin-top: 5px;
+  border: none;
+  margin-bottom: 5px;
+}
+.nav-wrapper ul ul {
+  background: #e7e7e7;
+  border: none;
+}
+.nav-wrapper ul ul a:hover {
+  background: #f8f8f8;
+  color: #333;
+}
+ul.nav ul li.dropdown:hover > ul.dropdown-menu {
+  /*  display: block;  */
+}
+
+#masthead {
+  margin: 0 auto 40px auto;
+}
+.site-title {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+.site-title a {
+  color: black;
+}
+.site-title a:hover {
+  text-decoration: none;
+}
+.site-description {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: medium;
+}
+
+/* 8. Footer 
+------------------------------------------------------- */
+#colophon {
+  background: #f8f8f8;
+  padding: 10px;
+  border-top: solid 1px #ddd;
+  border-bottom: solid 4px #ddd;
+}
+#footertext {
+  float: right;
+  text-align: right;
+}
+
+.article {
+  padding: 0 0 10px 0px;
+  border-bottom: 1px solid lightgray;
+}
+
+.comments label {
+  margin-top: 2px;
+  font-size: 12px;
+  color: gray;
+}
+
+.comments h3 {
+  margin-bottom: 20px;
+}
+
+.about {
+  margin-bottom: 20px;
+}
+
+.about img {
+  padding-left: 40px;
+  margin-top: 25px;
+}
+
+/* 9. Carousel
+-------------------------------------------- */
+
+#slides_control {
+    height: 200px;
+  position:absolute;
+  width: 400px;
+  left:50%;
+  top:20px;
+  margin-left:-200px;
+}
+
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+

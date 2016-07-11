@@ -1,0 +1,57 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="nav-wrapper container">
+        <div ng-include="'partials/_navbar.html'"></div>
+      </div>
+        <div id="content" class="site-content container">
+          <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+            <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+              <img ng-src="images/{{slide.image}}" style="margin:auto;">
+            </uib-slide>
+          </uib-carousel>
+            <main id="main" class="" role="main">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-9">
+                    <div class="row article" ng-repeat="article in articles | orderBy:'created_at':true | searchFor: searchString">
+                      <div class="col-sm-4">
+                        <a href="#" class="">
+                          <img src="images/articleImages/{{article.image}}" class="img-responsive">
+                        </a>
+                      </div>
+                      <div class="col-sm-8">
+                        <h3 class="title"><a href="#/article/{{article._id}}">{{article.title}}</a></h3>
+<!--                         <p class="text-muted"><span class="glyphicon glyphicon-lock"> </span> Sandra Wiberg</p> -->
+                        <div ng-bind-html="article.text | ellipsis:550"> </div>
+                        <p class="text-muted">{{article.created_at | date:'medium'}}</p>
+                      </div>
+                    </div>
+                    <ul class="pagination pagination-lg">
+                      <li><a href="#">«</a></li>
+                      <li class="active"><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li><a href="#">»</a></li>
+                    </ul>
+                      </div>
+                        <div ng-include="'partials/_sidebar.html'"></div>
+                      </div>
+                  </div>
+                </main>
+            </div>
+            <footer id="colophon" class="site-footer container" role="contentinfo">
+              <div class="site-info col-md-5">
+                Herpa derpa <a href="#/" rel="designer"></a>.    
+              </div><!-- .site-info -->
+              <div id="footertext" class="col-md-7">
+                flerpa sherpa        
+              </div>   
+          </footer>
+        </div>
+    </div>  
+  </div>
+</div>
